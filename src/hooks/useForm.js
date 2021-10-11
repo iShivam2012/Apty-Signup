@@ -1,7 +1,6 @@
 import { useState } from "react"
-import Validate from "../Validate"
 
-const useForm = () => {
+const useForm = (Validate) => {
     const [userEntered, setUserEntered] = useState({
         name: "",
         email: "",
@@ -15,7 +14,7 @@ const useForm = () => {
             ...userEntered,
             [name]: value
         })
-        setError(Validate(userEntered))
+        setError(Validate(name, value))
     }
 
     return { handleChange, userEntered, error }

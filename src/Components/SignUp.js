@@ -4,10 +4,11 @@ import Button from "../UI/Button"
 import Checkbox from "../UI/Checkbox"
 import Input from "../UI/Input"
 import "./SignUp.css"
+import Validate from "../Validate"
 
 const SignUp = (props) => {
     const [isChecked, setIsChecked] = useState(false)
-    const { handleChange, userEntered, error } = useForm()
+    const { handleChange, userEntered, error } = useForm(Validate)
 
     const onSubmitHandler = (e) => {
         e.preventDefault()

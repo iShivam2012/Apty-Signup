@@ -1,13 +1,13 @@
-const Validate = (userEntered) => {
+const Validate = (name, value) => {
     let errors = {};
 
-    if (userEntered.name.trim().length === 0) {
+    if (name === "name" && value.trim().length === 0) {
         errors.name = 'Name is required';
     }
-    if (!/\S+@\S+\.\S+/.test(userEntered.email)) {
+    if (name === "email" && !/\S+@\S+\.\S+/.test(value)) {
         errors.email = 'Email address is invalid';
     }
-    if (userEntered.password.length < 6) {
+    if (name === "password" && value.length < 6) {
         errors.password = 'Password must be 6 characters long';
     }
 
