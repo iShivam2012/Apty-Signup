@@ -14,7 +14,7 @@ const useForm = (Validate) => {
             ...userEntered,
             [name]: value
         })
-        setError(Validate(name, value))
+        setError(Validate(name, value, error))
     }
 
     return { handleChange, userEntered, error }

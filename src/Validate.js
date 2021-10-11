@@ -1,17 +1,40 @@
-const Validate = (name, value) => {
-    let errors = {};
+const Validate = (name, value, error) => {
+    // let errors = {};
+    switch (name) {
+        case "name": {
+            if (value.trim().length === 0) {
+                error.name = 'Name is required';
+            }
+            else {
+                delete error.name
+            }
+        }
+            break;
+        case "email": {
+            if (!/\S+@\S+\.\S+/.test(value)) {
+                error.email = 'Email address is invalid';
+            }
+            else {
+                delete error.email
+            }
+        }
+            break;
+        case "password": {
 
-    if (name === "name" && value.trim().length === 0) {
-        errors.name = 'Name is required';
-    }
-    if (name === "email" && !/\S+@\S+\.\S+/.test(value)) {
-        errors.email = 'Email address is invalid';
-    }
-    if (name === "password" && value.length < 6) {
-        errors.password = 'Password must be 6 characters long';
+            if (value.length < 6) {
+                error.password = 'Password must be 6 characters long';
+            }
+            else {
+                delete error.password
+            }
+        }
+            break;
+        default: error = {}
     }
 
-    return errors;
+
+
+    return error;
 }
 
 export default Validate;
