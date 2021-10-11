@@ -1,5 +1,5 @@
 const Validate = (name, value, error) => {
-    // let errors = {};
+
     switch (name) {
         case "name": {
             if (value.trim().length === 0) {
