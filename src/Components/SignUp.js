@@ -3,8 +3,9 @@ import useForm from "../hooks/useForm"
 import Button from "../UI/Button"
 import Checkbox from "../UI/Checkbox"
 import Input from "../UI/Input"
-import "./SignUp.css"
 import Validate from "../Validate"
+import logo from "../logo.svg"
+import "./SignUp.css"
 
 const SignUp = (props) => {
     const [isChecked, setIsChecked] = useState(false)
@@ -62,6 +63,7 @@ const SignUp = (props) => {
                 </form>
             </div>
             <div className="img-card" >
+                <img src={logo} alt="logo" className="logo" />
                 <img src="https://marvel-live.freetls.fastly.net/canvas/2021/6/89bc49d2817c486d9282f2d1bd7d8268?quality=95&fake=.png" alt="form-img" className="form-img" />
             </div>
         </div>
