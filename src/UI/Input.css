@@ -33,6 +33,23 @@
     color: #7F8A9C;
 }
 
+.symbol{
+  position: absolute;
+  margin:20px;
+  margin-left: 18%;
+  display: none;
+}
+
+.symbol-valid{
+  display: block;
+  color: #37F6B8;
+}
+
+.symbol-invalid{
+  display: block;
+  color: #FF0066;
+}
+
 .control.invalid {
     border: 2px solid #FF0066;
     border-radius: 6px;
@@ -48,4 +65,8 @@ i.invalid {
     color: #FF0066;
 }
  
-  
+@media (max-width: 459px) {
+  .symbol{
+    margin-left: 72%;
+  }
+}

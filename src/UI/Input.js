@@ -13,6 +13,7 @@ const Input = (props) => {
                 placeholder={props.placeholder}
                 onChange={props.onChange}
             />
+            <i className={`symbol ${props.isValid === false ? "symbol-invalid fa fa-times" : "symbol-valid fa fa-check"}`} ></i>
         </div>
 
     )
