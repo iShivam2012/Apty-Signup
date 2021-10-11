@@ -6,15 +6,18 @@ import Input from "../UI/Input"
 import Validate from "../Validate"
 import logo from "../logo.svg"
 import "./SignUp.css"
+import { useHistory } from "react-router"
 
 const SignUp = (props) => {
     const [isChecked, setIsChecked] = useState(false)
     const { handleChange, userEntered, error } = useForm(Validate)
+    const history = useHistory();
 
     const onSubmitHandler = (e) => {
         e.preventDefault()
         console.log("Submit")
         console.log(userEntered)
+        history.push("/dashboard")
     }
 
     const checkHandler = (e) => {
