@@ -1,0 +1,55 @@
+.control {
+    margin: 1rem 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  
+  
+.control input {
+    background-color: #FFFFFF;
+    border: 2px solid #C5D3E8;
+    border-radius: 6px;
+    color: #7F8A9C;
+    opacity: 0.6000000238418579;
+    width: 300px;
+    height: 50px;
+    padding-left:28px;
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+  
+  ::-webkit-input-placeholder {
+    font-style: italic;
+    font-weight: 600;
+ }
+
+.icon {
+    position: absolute;
+    margin:20px;
+    margin-left: 12px;
+    color: #7F8A9C;
+}
+
+.control.invalid {
+    border: 2px solid #FF0066;
+    border-radius: 6px;
+    background-color: rgba(197, 211, 232, 0.1);
+    width: fit-content;
+  }
+
+.control.invalid input {
+    color: #FF0066;
+}
+
+i.invalid {
+    color: #FF0066;
+}
+ 
+@media (max-width: 459px) {
+
+
+}
+  

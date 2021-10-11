@@ -1,0 +1,26 @@
+.checkbox-container{
+    margin: 1rem 0;
+}
+
+.checkbox-content{
+    color: #7F8A9C;
+    font-family: Open Sans;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.checkbox{
+    background-color: rgba(197, 211, 232, 0.1);
+    border: 2px solid #C5D3E8;
+    border-radius: 6px;
+    opacity: 0.6000000238418579;
+    width: 24px;
+    height: 16px;
+    margin:10px;
+    margin-bottom: 60px;
+}
+
+.highlighted{
+    color: #FF0066;
+}
